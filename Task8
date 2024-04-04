@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Task8 {
+
+    public static void main(String[] args) {
+            final String PASSWORD = "changeme";
+            final int MAX_ATTEMPTS = 5;
+            int attempts = 0;
+            boolean accessGranted = false;
+
+            Scanner scanner = new Scanner(System.in);
+
+            while (attempts < MAX_ATTEMPTS) {
+                System.out.print("Enter the password: ");
+                String userInput = scanner.nextLine();
+
+                if (userInput.equals(PASSWORD)) {
+                    accessGranted = true;
+                    break;
+                } else {
+                    System.out.println("Incorrect password. Attempts left: " + (MAX_ATTEMPTS - attempts - 1));
+                }
+
+                attempts++;
+            }
+
+            if (accessGranted) {
+                System.out.println("Password Accepted.");
+            } else {
+                System.out.println("Access denied. Please contact IT services to reset your password.");
+            }
+
+            scanner.close();
+        }
+}
