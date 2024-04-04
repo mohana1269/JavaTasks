@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Task4 {
+
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.print("Enter your age: ");
+            int age = scanner.nextInt();
+
+            String ageGroup;
+            if (age >= 0 && age <= 2) {
+                ageGroup = "Infant";
+            } else if (age >= 3 && age <= 12) {
+                ageGroup = "Child";
+            } else if (age >= 13 && age <= 19) {
+                ageGroup = "Teenager";
+            } else {
+                ageGroup = "Adult";
+            }
+
+            System.out.println("You are classified as: " + ageGroup);
+
+            scanner.close();
+        }
+}
