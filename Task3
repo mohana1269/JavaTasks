@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Task3 {
+
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.print("Enter the starting balance (£): ");
+            double startingBalance = scanner.nextDouble();
+
+            System.out.print("Enter the annual interest rate (%): ");
+            double interestRate = scanner.nextDouble() / 100;
+
+            for (int year = 1; year <= 4; year++) {
+                double balance = calculateBalance(startingBalance, interestRate, year);
+                System.out.println("Balance after year " + year + ": £" + balance);
+            }
+            scanner.close();
+        }
+        public static double calculateBalance(double startingBalance, double interestRate, int years) {
+            double balance = startingBalance;
+            for (int i = 0; i < years; i++) {
+                balance += balance * interestRate;
+            }
+            return balance;
+        }
+}
