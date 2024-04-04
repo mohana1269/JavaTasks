@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Task9 {
+
+    public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.print("Input a year: ");
+            int year = scanner.nextInt();
+
+            boolean isLeap = isLeapYear(year);
+
+            System.out.println(isLeap);
+
+            scanner.close();
+        }
+        public static boolean isLeapYear(int year) {
+            if (year % 4 != 0) {
+                return false;
+            } else if (year % 100 != 0) {
+                return true;
+            } else {
+                return year % 400 == 0;
+            }
+        }
+}
