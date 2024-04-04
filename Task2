@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Task2 {
+
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.print("Enter string for p: ");
+            String p = scanner.nextLine();
+
+            System.out.print("Enter string for q: ");
+            String q = scanner.nextLine();
+
+            System.out.print("Enter string for r: ");
+            String r = scanner.nextLine();
+
+            String concatCapital = (p + q + r).toUpperCase();
+
+            String concatLowercase = (r + p).toLowerCase();
+
+            int totalCharacters = p.length() + q.length() + r.length();
+
+            System.out.println("Concatenation (p+q+r) in capital letters: " + concatCapital);
+            System.out.println("Concatenation of (r + p) in lowercase: " + concatLowercase);
+            System.out.println("Total number of characters within (p+q+r): " + totalCharacters);
+
+            scanner.close();
+        }
+}
