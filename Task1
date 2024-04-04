@@ -1,0 +1,29 @@
+public class Task1 {
+    public static void main(String[] args) {
+
+            int integerNumber = 100;
+            long longNumber = 40000000000L;
+            float floatNumber = 2.189f;
+
+            long implicitCastingLong = integerNumber;
+            float implicitCastingFloat = longNumber;
+
+            int explicitCastingInt = (int) longNumber;
+            long explicitCastingLong = (long) floatNumber;
+
+
+            System.out.println("Original Values:");
+            System.out.println("Integer: " + integerNumber);
+            System.out.println("Long: " + longNumber);
+            System.out.println("Float: " + floatNumber);
+
+            System.out.println("\nImplicit Type Casting:");
+            System.out.println("Implicitly Cast Long: " + implicitCastingLong);
+            System.out.println("Implicitly Cast Float: " + implicitCastingFloat);
+
+            System.out.println("\nExplicit Type Casting:");
+            System.out.println("Explicitly Cast Long to Int: " + explicitCastingInt);
+            System.out.println("Explicitly Cast Float to Long: " + explicitCastingLong);
+        }
+}
+
